@@ -1,6 +1,6 @@
 
 export default function Home() {
   return (
-    <main>Stamp Rally</main>
+    <main className="scrollNone center">Stamp Rally</main>
   );
 }

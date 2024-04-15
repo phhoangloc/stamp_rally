@@ -7,14 +7,23 @@ body {
     color: white;
 }
 
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.scrollNone::-webkit-scrollbar {
+    display: none;
+}
+
 main {
     width: 100%;
     max-width: 575px;
     margin: auto;
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    overflow-y: scroll;
+
 
     .videoBox {
         position: relative;
@@ -72,6 +81,18 @@ main {
         }
     }
 
+    .productBox {
+        .detailBox {
+            width: 100%;
+
+            p {
+                margin: 25px 0;
+                opacity: 0;
+                transform: translateY(100px);
+                transition: all 1s;
+            }
+        }
+    }
 
     .modal {
         background-color: white;

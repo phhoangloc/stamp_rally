@@ -4,6 +4,7 @@ import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import PauseOutlinedIcon from '@mui/icons-material/PauseOutlined';
 import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
 import { useRouter } from 'next/navigation';
+
 type Props = {
     params: { slug: string }
 }
@@ -83,7 +84,7 @@ const Page = ({ params }: Props) => {
 
 
     return (
-        <main>
+        <main className='center'>
             {modalOpen ?
                 <div className="modal">
                     {listVideo.map((item: any, index: number) => seen.includes(item.name)).includes(false) ? null :
